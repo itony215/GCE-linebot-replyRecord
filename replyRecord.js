@@ -1,6 +1,6 @@
 var rp = require('request-promise');
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://admin:password@35.187.225.49:27017');//不能寫在export裡面
+const mongoose = require('mongoose');//不能寫在export裡面
+mongoose.connect('mongodb://admin:password@35.187.225.49:27017');//這行可以寫在export裡面
 var Record = mongoose.model('Record', {
   time: Number,
   userid: String,
